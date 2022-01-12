@@ -1,5 +1,9 @@
 :root {
-
+  --primary-color: rgba(98, 119, 126, 0.45);
+  --secondary-color: rgba(229, 148, 0, 0.9);
+  --overlay-color: rgba(25, 57, 83, 0.85);
+  --menu-speed: 0.75s;
+  --showcase-opacity: 0.2;
 }
 
 * {
@@ -8,112 +12,146 @@
   box-sizing: border-box;
 }
 
-/* Main Styling */
-html, body {
-  font-family: 'Nunito', sans-serif;
-  line-height: 1.7rem;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000;
+  font-family: "Nunito", sans-serif;
+  color: #fff;
+  line-height: 1.4;
 }
 
 a {
   text-decoration: none;
 }
 
-/* 
-h1, h2, h3 {
-  padding-bottom: 20px;
-} */
+ul {
+  list-style-type: none;
+}
+
 
 p {
   margin: 10px 0;
 }
 
-/* Utility Classes*/
-.l-heading {
-  font-size: 4rem;
-  margin-bottom: 0.75rem;
-  line-height:1.1;
-}
-
-.lead {
-  font-size: 1.3rem;
-  margin-bottom: 2rem;
-}
-
+/* Utility */
 .btn {
   display: inline-block;
-  color: #fff;
-  background: #d46938;
-  padding: 0.5rem 2rem;
   border: none;
-  border-radius: 5px;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 0.74rem 1.5rem;
+  margin: 1rem;
+  transition: opacity 1s ease-in-out;
+  text-decoration: none;
 }
 
 .btn:hover {
-  background: #6d290a;
+  opacity: 0.7;
 }
 
-.btn-dark {
-  background: #333;
-  color: #fff;
-}
-
-.text-primary {
-
-}
 /* Navbar */
-#navbar {
+.navbar {
+  background-color: #000;
+  height: 70px;
+  width: 100%;
+  padding: 5px 10px;
+  margin-bottom: 50px;
+  position: fixed;
+  z-index: 10;
+  opacity: 0.8;
+}
+
+/* .navbar a {
+  display: block;
+  width: 250px;
+  height: 60px;
+} */
+
+.navbar .container {
   display: flex;
-  position: sticky;
-  top: 0;
-  background: #333;
-  color: #fff;
-  overflow: auto;
   justify-content: space-between;
-  z-index: 1;
-  padding: 1rem;
-}
-
-#navbar ul {
-  display: flex;
   align-items: center;
-  list-style: none;
 }
 
-
-#navbar a{
-  color: #fff; 
-  padding: 0.5rem;
-  margin: 0 0.2rem;
-}
-
-#navbar ul li a:hover {
-  background: #93cb52;
-  border-radius: 5px;
-}
-
-
-/* ShowCase */
-#showcase {
-  background: #333 url('../img/showcase-2.jpg') no-repeat center center/cover;
-  height: 100vh;
-  color: #fff;
-}
-
-#showcase .showcase-content {
+.navbar ul {
   display: flex;
-  flex-direction: column;
+}
+
+.navbar ul a {
+  margin-left: 30px;
+  padding-bottom: 5px;
+}
+
+.navbar ul li a {
+  color: #fff;
+  padding: 0.75rem;
+  margin: 0 0.25rem;
+}
+
+.navbar a {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.navbar a:hover {
+  color: #3195ff;
+}
+
+.navbar ul a:hover {
+  color: #3195ff;
+  border-bottom: 2px #3195ff solid;
+}
+
+.menu-wrap {
+  display: none;
+}
+
+/* Showcase container */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 3rem;
+}
+
+#showcase {
+  position: relative;
+  background: url('../img/showcase-2.jpg') no-repeat center center/cover;
+  height: 1100px;
+  width: 100%;
   text-align: center;
+  padding: 0 100px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  padding: 0 2rem;
-  /* Overlay */
-  position: absolute;
-  top: 59px;
-  left: 0;
-  background-color: rgba(0,0,0,0.4);
 }
 
-#projects .section-content {
-  
+#showcase::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, var(--showcase-opacity));
+  position: absolute;
+  top: 0;
+  left: 0;
 }
+
+#showcase .showcase-container {
+ position: relative;
+ z-index: 2;
+ width: 700px;
+ margin: 0 auto;
+}
+
+#showcase h1 {
+  font-size: 4rem;
+}
+
+#showcase p {
+  font-size: 2rem;
+}
+
