@@ -55,8 +55,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
 ScrollReveal().reveal('.navbar');
 ScrollReveal().reveal('.showcase');
-ScrollReveal().reveal('.hero-headline', { delay: 600 })
-ScrollReveal().reveal('.hero-desc', { delay: 700 })
+ScrollReveal().reveal('.hero-headline', { delay: 600})
+ScrollReveal().reveal('.hero-desc', { delay: 900 })
 ScrollReveal().reveal('.about-grid img', { delay: 600 })
 ScrollReveal().reveal('.card-body', { delay: 750 });
 ScrollReveal().reveal('#skills', { delay: 200 });
