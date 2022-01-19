@@ -116,6 +116,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: bolder;
   }
   
   .menu-wrap .menu > div {
