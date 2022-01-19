@@ -9,9 +9,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet"  media="screen and (max-width: 768px)" href="css/menu.css">
-  <title>Samed Walker</title>
+  <title>Samed Walker | Software Engineer</title>
 </head>
 <body>
   <!-- Navigation -->
@@ -19,11 +20,16 @@
     <div class="container">
       <a href="#"> Samed Walker</a>
       <ul class="desktop-menu">
+        <button class="theme" role="switch" aria-label="light/dark mode"></button>
+        <audio src="./audio/audio_light-on.mp3" class="theme-audio--light-on"
+          data-attribute="adapted from user 160033 file on freesound.org https://freesound.org/people/160033/sounds/366184/ under CC BY-NC 3.0"></audio>
+        <audio src="./audio/audio_light-off.mp3" class="theme-audio--light-off"
+          data-attribute="adapted from user 160033 file on freesound.org https://freesound.org/people/160033/sounds/366184/ under CC BY-NC 3.0"></audio>
         <li><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="#about">Bio</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#Experience">Experience</a></li>
-        <li><a href="#resume">Resume</a></li>
+        <li><a href="https://media-exp1.licdn.com/dms/document/C4E2DAQE8JrPxAtVfqA/profile-treasury-document-pdf-analyzed/0/1636383161617?e=1642694400&v=beta&t=ox2s8jz2g-oToP-340Ts1n7CUc_pxO-g70tVTp1MtxE" target="_blank" rel="noopener">Resume</a></li>
       </ul>
 
       <!-- Hamburger Menu -->
@@ -35,9 +41,9 @@
             <div>
               <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#about">Bio</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#Experience">Experience</a></li>
                 <li><a href="#resume">Resume</a></li>
               </ul>
             </div>
@@ -47,14 +53,155 @@
     </div>
   </nav>
 
+  <!-- Header  -->
   <header id="showcase">
     <div class="showcase-container">
       <div class="container">
-        <h1>Hi I'm Samed Walker</h1>
-        <p>Front-End Engineer | Back-End Engineer</p>
-        <a href="#" class="btn">Resume</a>
+        <h1 class="hero-headline">Hi I'm Samed Walker</h1>
+        <p class="hero-desc">Front-End Developer & Back-End Developer</p>
+        <a href="#about" class="btn">About Me</a>
       </div>
     </div>
   </header>
+
+   <!-- Sidebar Links -->
+  <div class="non-mobile sidebar-links">
+    <!-- <div class="container"> -->
+      <div class="vertical-divider"></div>
+      <a
+        target="_blank"
+        class="side-link"
+        href="https://github.com/ASamedWalker"
+        rel="noopener"
+        ><i class="fab fa-github fa-3x"></i
+      ></a>
+      <div class="mini-divider"></div>
+      <a
+        target="_blank"
+        class="side-link"
+        href="https://www.linkedin.com/in/abdulsamed-walker/"
+        rel="noopener"
+        ><i class="fab fa-linkedin-in fa-3x"></i
+      ></a>
+      <div class="vertical-divider"></div>
+    <!-- </div> -->
+  </div>
+
+  <!-- Section: About-->
+  <section id="about" class="section-padding-lg about py-1">
+    <div class="container">
+      <h2 class="m-heading text-start"><span class="text-primary">Bio</span></h2>
+      <div class="divider-bio"></div>
+      <div class="about-grid">
+        <img src="./img/samed.jpg" alt="Samed Walker">
+        <div class="card">
+          <div class="card-body">
+            <p>
+              Hello, my name is Samed and I am a software engineer interested in both Front-End and 
+              Back-End development. 
+            </p>
+            <p>
+              My passion for software engineering expanded my knowledge to 
+              explore different web stacks and technologies in web development.
+            </p>
+            <p>
+              I am currently playing around 
+              with Express, Node.js, SQL, React, and MongoDB.
+            </p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Section: Skills -->
+  <section id="skills" class="section-padding-lg py-1">
+    <div class="container">
+      <h2 class="m-heading text-start"><span class="text-primary text-secondary">Skills</span></h2>
+      <div class="divider-skills"></div>
+      <div class="card">
+        <div class="card-skills">
+          <p>
+            <span class="text-primary">Languages | &nbsp;</span>
+            HTML/CSS&nbsp;•&nbsp;JavaScript,
+          </p>
+          <p>
+            <span class="text-primary">Tools & Frameworks | &nbsp</span>MongoDB
+            &nbsp;•&nbsp; Express &nbsp;•&nbsp; React &nbsp;•&nbsp; Node.js
+            &nbsp;•&nbsp; Git
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Projects -->
+  <section id="projects" class="section-padding-lg py-1">
+    <div class="container">
+      <h2 class="m-heading text-start"><span class="text-primary text-secondary">Projects</span></h2>
+      <div class="divider-projects"></div>
+      <div class="project-list">
+        <!-- Project FoodTracker -->
+        <div id="food-tracker" class="project-item">
+          <div class="mobile">
+            <div class="project-links">
+              <a target="_blank" id="food-tracker"
+              href="https://asamedwalker.github.io/FoodTrackWebpack/" rel="noopener"></a>
+              <img id="project-image" src="./img/project-1.png" alt="Food-Tracker">
+              <a target="_blank" class="github-link" href="https://github.com/ASamedWalker/FoodTrackWebpack" rel="noopener"><i class="fab fa-github fa-3x"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h2 class="text-primary text-medium">
+              FoodTracker
+            </h2>
+            <p>
+              FoodTracker is a application that uses googles firebase Cloud API to accept food names in the select
+              dropdown list to prevent unwanted words from getting access to the API cloud data storage. The application
+              displays a chart showing the number of calories in each of the food items selected.
+            </p>
+            <ul class="list float-left">
+              <li class="text-primary">HTML</li>
+              <li class="text-primary">CSS</li>
+              <li class="text-primary">Javascript</li>
+              <li class="text-primary">Firebase</li>
+              <li class="text-primary">Chart.js</li>
+              <li class="text-primary">Snackbar.js</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Project Mastermind Game -->
+        <div id="mastermind" class="project-item">
+          <div class="mobile">
+            <div class="project-links">
+              <a target="_blank" id="mastermind"
+              href="https://asamedwalker.github.io/MastermindGame/" rel="noopener"></a>
+              <img id="project-image" src="./img/project-2.png" alt="mastermind">
+              <a target="_blank" class="github-link" href="https://github.com/ASamedWalker/FoodTrackWebpack" rel="noopener"><i class="fab fa-github fa-3x"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h2 class="text-primary text-medium">
+              Mastermind Game
+            </h2>
+            <p>
+              Mastermind is a web-based application game of the mastermind board game. The
+              game utilized a programming language called javascript. I also implemented javascript’s 
+              ES6 classes, ES6 modules, and parcel to bundle modules together. I also implemented 
+              Modul,View, and Controller (MVC) design patterns to give structure to my code.
+            </p>
+            <ul class="list float-left">
+              <li class="text-primary">HTML</li>
+              <li class="text-primary">CSS</li>
+              <li class="text-primary">Javascript</li>
+              <li class="text-primary">Random API</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="./js/script.js"></script>
 </body>
 </html>
